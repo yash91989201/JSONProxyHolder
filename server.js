@@ -2,6 +2,7 @@ import fetch from "node-fetch";
 import cors from "cors";
 import express from "express";
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
@@ -46,6 +47,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(3000, (err) => {
+app.listen(PORT, (err) => {
   err ? `Error occoured ${err.message}` : "Server running at port 3001";
 });
