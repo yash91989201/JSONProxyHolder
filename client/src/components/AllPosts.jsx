@@ -10,7 +10,7 @@ const AllPosts = () => {
           <div>
             <h4 className="py-8  text-5xl text-center">All Posts</h4>
           </div>
-          <div className="py-8 grid grid-cols-3 grid-row gap-6  auto-rows-auto">
+          <div className="py-8 px-3 grid md:grid-cols-2 lg:grid-cols-3 grid-row gap-6  auto-rows-auto">
             {data.map((post, id) => (
               <Link key={id} to={`/post/${id + 1}`}>
                 <div className="h-full border rounded-md overflow-hidden hover:shadow-sm hover:shadow-blue-500 cursor-pointer">
